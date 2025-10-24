@@ -1,0 +1,135 @@
+/* ===== VARIÁVEIS DE CORES ===== */
+:root {
+  --primary-color: #4CAF50;
+  --secondary-color: #FF9800;
+  --text-color: #333;
+  --bg-opacity: rgba(255, 255, 255, 0.95);
+}
+
+/* ===== FUNDO GLOBAL ===== */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text-color);
+  height: 100%;
+}
+
+.bg-site {
+  background: url('../img/animals-bg.jpg') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* ===== FORMULÁRIOS CENTRALIZADOS ===== */
+.form-container {
+  background-color: var(--bg-opacity);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  width: 100%;
+  max-width: 500px;
+}
+
+/* ===== TÍTULOS ===== */
+.form-container h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 25px;
+}
+
+/* ===== INPUTS ===== */
+input.form-control,
+select.form-select,
+textarea.form-control {
+  border-radius: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  padding: 10px 14px;
+}
+
+/* ===== BOTÕES ===== */
+.btn {
+  border-radius: 12px;
+  padding: 12px 20px;
+  font-weight: 600;
+  margin: 5px;
+  min-width: 120px;
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  color: #fff;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #43a047;
+}
+
+.btn-secondary {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+}
+
+.btn-secondary:hover {
+  background-color: #fb8c00;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+/* ===== ALERTAS ===== */
+.alert {
+  border-radius: 12px;
+  text-align: center;
+  max-width: 500px;
+  margin: 10px auto;
+}
+
+/* ===== CARDS DE ANIMAIS ===== */
+.animal-card {
+  background-color: var(--bg-opacity);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  transition: transform 0.3s;
+  margin-bottom: 20px;
+}
+
+.animal-card:hover {
+  transform: translateY(-5px);
+}
+
+.animal-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.animal-card-body {
+  padding: 15px;
+}
+
+.animal-card h5 {
+  margin: 0 0 10px 0;
+  color: var(--primary-color);
+}
+
+/* ===== RESPONSIVO ===== */
+@media (max-width: 768px) {
+  .form-container {
+    max-width: 90%;
+    padding: 30px;
+  }
+
+  .animal-card img {
+    height: 180px;
+  }
+}
